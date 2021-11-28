@@ -1,5 +1,5 @@
-SPRING CLOUD DISCOVERY OPENFEIGN LOCALHOST
-==========================================
+SPRING CLOUD DISCOVERY OPENFEIGN
+================================
 
 
 LOCALHOST URL

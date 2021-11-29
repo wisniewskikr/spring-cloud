@@ -1,5 +1,5 @@
-LOCALHOST URL
--------------
+SPRING CLOUD ROUTING RIBBON
+---------------------------
 
 * **URL GET Greeting**: http://localhost:8080/greeting/lang/{lang}/name/{name} . For instance: http://localhost:8080/greeting/lang/pl/name/Chris 
 * **URL GET Text**: http://localhost:9090/text/lang/{lang} . For instance: http://localhost:9090/text/lang/pl

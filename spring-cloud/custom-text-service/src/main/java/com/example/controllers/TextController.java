@@ -16,13 +16,11 @@ public class TextController {
 
 	private static final String VERSION = "1";
 	
-	@Autowired
-	private Environment environment;
-	
+	private Environment environment;	
 	private TextService textService;
 	
 	@Autowired
-	public TextController(TextService textService) {
+	public TextController(Environment environmen, TextService textService) {
 		this.textService = textService;
 	}
 

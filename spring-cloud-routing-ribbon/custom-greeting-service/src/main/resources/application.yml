@@ -6,7 +6,7 @@ custom-text-service-ribbon:
   ribbon:
     eureka:
       enabled: false
-    listOfServers: custom-text-service
+    listOfServers: custom-text-service:9090
     ServerListRefreshInterval: 2000
 
 server:

@@ -2,8 +2,9 @@ version: '3'
 
 services:
 
-  system-eureka-namng-server-service:
-    image: system-eureka-namng-server-service
+  system-eureka-naming-server-service:
+    image: system-eureka-naming-server-service
+    container_name: system-eureka-naming-server-service
     build:
       context: ./system-eureka-naming-server-service
       dockerfile: Dockerfile-Fast
@@ -23,20 +24,25 @@ services:
     networks:
       - network
     depends_on:
-      - system-eureka-namng-server-service     
+      - system-eureka-naming-server-service
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://system-eureka-naming-server-service:8761/eureka    
 
-  custom-greeting-service:
-    image: custom-greeting-service
-    build:
-      context: ./custom-greeting-service
-      dockerfile: Dockerfile-Fast
-    ports:
-      - "8080:8080"
-    networks:
-      - network
-    depends_on:
-      - custom-text-service
-      - system-eureka-namng-server-service
+#  custom-greeting-service:
+#    image: custom-greeting-service
+#    container_name: custom-greeting-service
+#    build:
+#      context: ./custom-greeting-service
+#      dockerfile: Dockerfile-Fast
+#    ports:
+#      - "8080:8080"
+#    networks:
+#      - network
+#    depends_on:
+#      - custom-text-service
+#      - system-eureka-naming-server-service
+#    environment:
+#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://system-eureka-naming-server-service:8761/eureka
 
 networks:
   network:

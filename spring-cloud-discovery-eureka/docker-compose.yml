@@ -23,7 +23,10 @@ services:
     networks:
       - network
     depends_on:
-      - system-eureka-namng-server-service     
+      - system-eureka-namng-server-service
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://system-eureka-namng-server-service:8761/eureka
 
   custom-greeting-service:
     image: custom-greeting-service
@@ -37,6 +40,9 @@ services:
     depends_on:
       - custom-text-service
       - system-eureka-namng-server-service
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://system-eureka-namng-server-service:8761/eureka
 
 networks:
   network:

@@ -1,3 +1,8 @@
+Instalacja:
+- dodac zaleznosci od klienta
+- dodac @LoadBalanced nad RestTemplate
+- dodac JPA i baze danych - dlaczego?
+
 LOCALHOST URL
 -------------
 

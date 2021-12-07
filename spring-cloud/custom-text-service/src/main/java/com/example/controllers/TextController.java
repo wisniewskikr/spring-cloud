@@ -20,7 +20,8 @@ public class TextController {
 	private TextService textService;
 	
 	@Autowired
-	public TextController(Environment environmen, TextService textService) {
+	public TextController(Environment environment, TextService textService) {
+		this.environment = environment;
 		this.textService = textService;
 	}
 

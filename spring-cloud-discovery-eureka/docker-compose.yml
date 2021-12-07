@@ -4,6 +4,7 @@ services:
 
   system-eureka-namng-server-service:
     image: system-eureka-namng-server-service
+    container_name: system-eureka-naming-server-service
     build:
       context: ./system-eureka-naming-server-service
       dockerfile: Dockerfile
@@ -24,12 +25,10 @@ services:
       - network
     depends_on:
       - system-eureka-namng-server-service
-    environment:
-      - JAVA_OPTS=
-        -DEUREKA_SERVER=http://system-eureka-namng-server-service:8761/eureka
 
   custom-greeting-service:
     image: custom-greeting-service
+    container_name: custom-greeting-service
     build:
       context: ./custom-greeting-service
       dockerfile: Dockerfile
@@ -40,9 +39,6 @@ services:
     depends_on:
       - custom-text-service
       - system-eureka-namng-server-service
-    environment:
-      - JAVA_OPTS=
-        -DEUREKA_SERVER=http://system-eureka-namng-server-service:8761/eureka
 
 networks:
   network:

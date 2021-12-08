@@ -43,7 +43,8 @@ Implementation details:
 * Create module "system-api-gateway-service";
 * In module "system-api-gateway-service" in file "pom.xml" add dependency "spring-cloud-starter-gateway";
 * In module "system-api-gateway-service" in file "application.yml" add "cloud -> gateway -> routes";
-* Add definition of this module to docker-compose files.
+* Add definition of this module to docker-compose files;
+* Update "custom-greeting-service": RestTemplate url should point on "system-api-gateway-service", not directly on "custom-text-service".
 
   
 

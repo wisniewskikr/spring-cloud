@@ -7,6 +7,7 @@ LOCALHOST URL
 * **URL GET Greeting**: http://localhost:8080/greeting/lang/{lang}/name/{name} . For instance: http://localhost:8080/greeting/lang/pl/name/Chris 
 * **URL GET Text**: http://localhost:9090/text/lang/{lang} . For instance: http://localhost:9090/text/lang/pl
 
+
 ORDER
 -----
 
@@ -15,6 +16,14 @@ You have to run projects if following order:
 - Text;
 - Greeting (contains REST Client Operfeign);
 - Gateway.
+
+
+DIFFERENCES TO LOCALHOST
+-----------------------
+
+Differences:
+- Eureka location has to be added in all services in application.yml;
+- JPA and Database dependencies have to be added to all custom services.
 
 
 DESCRIPTION
